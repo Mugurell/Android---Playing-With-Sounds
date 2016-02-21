@@ -3,18 +3,70 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:background="#b3deff">
 
     <ImageView
         android:id="@+id/mainA_RL_IV_kidLaughing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@raw/kid_laughing"/>
+        android:src="@raw/kid_laughing"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="kid_laughing"/>
+
+    <TextView
+        android:id="@+id/mainA_RL_TV_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume: "
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:textAlignment="center"
+        android:layout_below="@id/mainA_RL_IV_kidLaughing"/>
+    <SeekBar
+        android:id="@+id/mainA_RL_SB_volume"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/mainA_RL_TV_volume"
+        android:layout_below="@id/mainA_RL_IV_kidLaughing"
+        android:layout_alignEnd="@id/mainA_RL_IV_kidLaughing"
+        android:layout_alignBottom="@id/mainA_RL_TV_volume"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:elevation="20dp"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/mainA_RL_TV_scrub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seek: "
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:textAlignment="center"
+        android:layout_below="@id/mainA_RL_TV_volume"
+        android:layout_alignEnd="@id/mainA_RL_TV_volume"
+        android:layout_alignStart="@id/mainA_RL_TV_volume"/>
+    <SeekBar
+        android:id="@+id/mainA_RL_SB_scrub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/mainA_RL_TV_scrub"
+        android:layout_below="@id/mainA_RL_SB_volume"
+        android:layout_alignEnd="@id/mainA_RL_SB_volume"
+        android:layout_alignBottom="@id/mainA_RL_TV_scrub"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:elevation="20dp"
+        android:layout_centerVertical="true" />
+
 
     <LinearLayout
-        android:layout_below="@id/mainA_RL_IV_kidLaughing"
+        android:layout_below="@id/mainA_RL_SB_volume"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
         android:orientation="horizontal">
 
         <View
@@ -28,6 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="Play"
+            android:background="#ffa66b"
             android:textSize="24sp"/>
 
         <View
@@ -41,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="Pause"
+            android:background="#ffa66b"
             android:textSize="24sp"/>
 
         <View
